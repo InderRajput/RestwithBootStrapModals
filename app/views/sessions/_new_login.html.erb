@@ -1,0 +1,28 @@
+<% provide(:title, "Login Page") %>
+<div class="login-page">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <table class="table table-bordered table-striped table-condensed">
+        <%= form_for(:session, url: login_path) do |f| %>
+            <tr>
+              <td colspan="2">Login Form</td>
+            </tr>
+
+            <tr>
+              <td><%= f.label :email, "Email Id" %></td>
+              <td><%= f.text_field :email, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <td><%= f.label :password %></td>
+              <td><%= f.password_field :password, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <td colspan="2"><%= f.submit"Login", class: "btn btn-sm btn-success" %></td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

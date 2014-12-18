@@ -1,0 +1,58 @@
+<div id="New-Form">
+
+    <%= form_for(@submission) do |f| %>
+
+        <%= render 'shared/error_messages' %>
+        <table class="table table-bordered table-striped">
+          <tr>
+            <td><%= f.label :name %></td>
+            <td><%= f.text_field :name, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :skill %></td>
+            <td><%= f.text_field :skill, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :email %></td>
+            <td><%= f.email_field :email, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :phone %></td>
+            <td><%= f.phone_field :phone, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :location, "Current Location" %></td>
+            <td><%= f.text_field :location, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :rate, "Rate/Salary" %></td>
+            <td><%= f.phone_field :rate, class: "form-control" %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :availability %></td>
+            <td><%= f.select(:availability, options_for_select([['Immediate', 'Immediate'], ['1 Week', '1 Week'], ['2 Weeks', '2 Weeks']], class: "form-control")) %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :relocation %></td>
+            <td><%= f.select(:relocation, options_for_select([['Yes', 'Yes'], ['No', 'No']], class: "form-control")) %></td>
+          </tr>
+
+          <tr>
+            <td><%= f.label :visa %></td>
+            <td><%= f.select(:visa, options_for_select([['Citizen', 'Citizen'], ['GC', 'GC'], ['GC-EAD', 'GC-EAD'], ['H1B', 'H1B'], ['OPT-EAD', 'OPT-EAD'], ['L2-EAD', 'L2-EAD']], class: "form-control")) %></td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><%= f.submit"Submit", class: "btn btn-success" %>
+            <%= link_to "Back", submissions_path, class: "btn btn-mini btn-primary" %></td>
+          </tr>
+        </table>
+  <% end %>
+</div>

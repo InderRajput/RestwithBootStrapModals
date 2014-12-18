@@ -1,0 +1,49 @@
+<% provide(:title, "Show") %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      <table class="table table-bordered table-hover">
+          <tr class="info">
+            <td>Name: </td><td><%= @submission.name %></td>
+          </tr>
+
+          <tr>
+            <td>Skill: </td><td><%= @submission.skill %></td>
+          </tr>
+
+          <tr>
+            <td>Email: </td><td><%= @submission.email %></td>
+          </tr>
+
+          <tr>
+            <td>Phone: </td><td><%= @submission.phone %></td>
+          </tr>
+
+          <tr>
+            <td>Location: </td><td><%= @submission.location %></td>
+          </tr>
+
+          <tr>
+            <td>Visa: </td><td><%= @submission.visa %></td>
+          </tr>
+
+          <tr>
+            <td>Rate/Salary: </td><td><%= @submission.rate %></td>
+          </tr>
+
+          <tr>
+            <td>Availability </td><td><%= @submission.availability %></td>
+          </tr>
+
+          <tr>
+            <td>Willing to Relocation </td><td><%= @submission.relocation %></td>
+          </tr>
+
+        <tr>
+          <td colspan="2"><%= link_to "Edit", edit_submission_path, class: "btn btn-sm btn-success" %>
+          <%= link_to "Back", submissions_path, class: "btn btn-sm btn-primary" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>

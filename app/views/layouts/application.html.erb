@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+              <title><%= yield(:title) %> | Submissions Report</title>
+              <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+              <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+              <%= csrf_meta_tags %>
+        </head>
+
+        <body>
+               <% if logged_in? %>
+                  <%= render "layouts/top_navigation" %>
+                    <div class="layout">
+                      <%= render "layouts/navigationpage" %>
+                      <%= yield %>
+                </div>
+                <% else %>
+                  <%= render "sessions/new_login" %>
+                 <% end%>
+         </body>
+    </html>

@@ -1,0 +1,18 @@
+<% if @current_user.admin? %>
+   <div class="apps-layout">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active" id="home"><%= link_to "Users", users_path %></li>
+          <li role="presentation"><a href="#">Interview Report</a></li>
+          <li role="presentation"><%= link_to "Create New User", new_user_path %></li>
+        </ul>
+   </div>
+
+    <% else %>
+        <div class="apps-layout">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active" id="home"><%= link_to "Home", submissions_path %></li>
+            <li role="presentation"><a href="#">Interview Report</a></li>
+            <li role="presentation"><%= link_to "New Submission", new_submission_path %></li>
+          </ul>
+        </div>
+<% end %>
